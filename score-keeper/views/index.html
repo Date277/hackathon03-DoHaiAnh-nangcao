@@ -1,0 +1,22 @@
+<!-- views/index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Score Keeper</title>
+    <link rel="stylesheet" href="../public/css/style.css" />
+  </head>
+  <body>
+    <h1>Score Keeper</h1>
+    <form action="/start" method="post">
+      <label for="player1">Player 1: </label>
+      <input type="text" name="player1" required /><br />
+      <label for="player2">Player 2: </label>
+      <input type="text" name="player2" required /><br />
+      <label for="player3">Player 3: </label>
+      <input type="text" name="player3" required /><br />
+      <label for="player4">Player 4: </label>
+      <input type="text" name="player4" required /><br />
+      <button type="submit">Start</button>
+    </form>
+  </body>
+</html>

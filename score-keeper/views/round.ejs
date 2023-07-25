@@ -1,0 +1,37 @@
+<!-- views/round.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Score Keeper</title>
+    <link rel="stylesheet" href="../public/css/style.css" />
+    <script src="../public/js/main.js"></script>
+  </head>
+  <body>
+    <h1>Score Keeper</h1>
+    <table>
+      <tr>
+        <th>Player Name</th>
+        <th>Score</th>
+        <th>Actions</th>
+      </tr>
+      <% players.forEach((player) => { %>
+      <tr>
+        <td><%= player.name %></td>
+        <td><span id="<%= player.name %>-score"><%= player.score %></span></td>
+        <td>
+          <button
+            onclick="updateScore('<%= roundId %>', '<%= player.name %>', 'increase')"
+          >
+            +
+          </button>
+          <button
+            onclick="updateScore('<%= roundId %>', '<%= player.name %>', 'decrease')"
+          >
+            -
+          </button>
+        </td>
+      </tr>
+      <% }); %>
+    </table>
+  </body>
+</html>
